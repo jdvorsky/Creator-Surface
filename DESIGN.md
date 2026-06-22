@@ -73,5 +73,15 @@ Implementation then proceeded in small loops: choose one high-value gap, patch i
 
 This workflow uses the token budget for early coverage and contradiction detection, then spends the final window on convergence: fewer changes, stronger tests, and playtest-generated QoL. 
 
+## Improvements With More Time
+
+With more time, I would focus on deeper editor ergonomics rather than expanding the product into a game engine or backend system.
+
+The highest-value improvement would be richer source-to-visual navigation: portal target rows could offer a direct “go to target” action, cross-scene references could show clearer context, and the map could provide lightweight same-scene relationship affordances without making portals feel like a full graph editor.
+
+I would also add an import preview flow. Today, valid imports are recoverable with undo, but replacing an entire world is consequential enough that a diff or a confirmation preview would make the workflow safer and more legible.
+
+Finally, I would continue hardening accessibility and browser coverage: automated contrast checks, more screen-reader-focused map announcements, Firefox in the Playwright matrix, and additional reduced-motion review. These are polish items, but they fit the core goal of making the editor feel trustworthy under real authoring conditions.
+
 
 The main commands are documented in `README.md`.
