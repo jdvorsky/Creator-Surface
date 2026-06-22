@@ -1,0 +1,7 @@
+{
+  "maxTotalJsGzipBytes": 286720,
+  "maxTotalCssGzipBytes": 6144,
+  "maxRawChunkBytes": 512000,
+  "appShellVisibleMs": 1500,
+  "defaultSceneSelectableGlyphs": 5
+}
