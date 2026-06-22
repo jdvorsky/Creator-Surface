@@ -65,4 +65,13 @@ Automated coverage is split by layer:
 - React tests for synchronized surfaces, accessibility states, toolbar flows, and recovery UI
 - Playwright tests for reviewer workflows in Chromium and WebKit
 
+## Agentic Implementation Workflow
+
+My six-hour agentic workflow worked through tight verification loops rather than a single long implementation pass. I started by freezing the acceptance contract, then asked parallel agents to inspect separate risk areas: source-of-truth/state transitions, validation coverage, synchronized UI behavior, accessibility, and end-to-end reviewer flows. Each agent returned factual gaps with file references and suggested tests, not broad opinions.
+
+Implementation then proceeded in small loops: choose one high-value gap, patch it, add or update the smallest proving test, run the relevant subset, and then continue. The main agent would own integration and product judgment, keeping optional polish from weakening P0 data-safety behavior. Near the end, the loop switched from feature work to release hardening: full `npm run check`, cross-browser Playwright, docs trimming, and a clean submission depot with only reviewer-facing history.
+
+This workflow uses the token budget for early coverage and contradiction detection, then spends the final window on convergence: fewer changes, stronger tests, and playtest-generated QoL. 
+
+
 The main commands are documented in `README.md`.
